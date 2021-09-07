@@ -30,7 +30,7 @@ If you don't know the exact format of an input string, but know it could be one 
 dayjs("12-25-2001", ["YYYY", "YYYY-MM-DD"], 'es', true);
 ```
 
-### List of all available parsing tokens
+### List of available parsing tokens in the CustomParseFormat plugin 
 
 | Input  | Example          | Description                       |
 | ------ | ---------------- | --------------------------------- |
@@ -61,5 +61,17 @@ dayjs("12-25-2001", ["YYYY", "YYYY-MM-DD"], 'es', true);
 | `X`    | 1410715640.579   | Unix timestamp                    |
 | `x`    | 1410715640579    | Unix ms timestamp                 |
 
+
+For additional formatting, version 1.9+ added timezone abbreviations using the advancedFormat plugin
+```
+var advanced = required("dayjs/plugin/advancedFormat")
+dayjs.extend(advanced)
+```
+
+### List of all available parsing tokens with advancedFormat plugin
+
+| Input  | Example          | Description                       |
+| ------ | ---------------- | --------------------------------- |
+| `z`    | 01               | Timezone Abbreviation             |
 
 
